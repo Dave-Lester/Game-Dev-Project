@@ -1,0 +1,161 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://pexels-eberhard-grossgasteiger-2098428.jpg" type="Texture" id=1]
+[ext_resource path="res://venus_rising/venus rising rg.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://bernel logo.png" type="Texture" id=3]
+[ext_resource path="res://pngwing.com.png" type="Texture" id=4]
+[ext_resource path="res://Back.gd" type="Script" id=5]
+[ext_resource path="res://Y2Mate.is - LASER GUN - Sound effect-o6Dr2WXZWJg-160k-1655373772977.mp3" type="AudioStream" id=6]
+[ext_resource path="res://icon/button.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 20
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1376.0
+margin_bottom = 773.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 42.0
+margin_top = 125.0
+margin_right = 285.0
+margin_bottom = 163.0
+custom_colors/font_color = Color( 0.937255, 0.611765, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.00784314, 0.113725, 0.415686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 1 )
+text = "Group Member"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 43.0
+margin_top = 167.0
+margin_right = 623.0
+margin_bottom = 304.0
+custom_fonts/font = SubResource( 2 )
+text = "Dave Lester Pantila - Programmer
+Bernel Ibalin - Designer
+Leonard Corod - Tester
+Mary Joy Banastao - Marketing
+Myline Vale - Marketing"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 46.0
+margin_top = 329.0
+margin_right = 294.0
+margin_bottom = 361.0
+custom_colors/font_color = Color( 0.937255, 0.611765, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.00784314, 0.113725, 0.415686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 3 )
+text = "Game"
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 44.0
+margin_top = 375.0
+margin_right = 665.0
+margin_bottom = 512.0
+custom_fonts/font = SubResource( 4 )
+text = "Template by Master Albert
+Background Image by Pexels
+Font - Venus Rising
+Background Music from Youtube.com
+"
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+margin_left = 1036.0
+margin_top = 343.0
+margin_right = 1453.0
+margin_bottom = 919.0
+rect_rotation = 82.5
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 881.0
+margin_top = -185.0
+margin_right = 1669.0
+margin_bottom = 554.0
+rect_rotation = 24.1
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+margin_left = 46.0
+margin_top = 643.0
+margin_right = 193.0
+margin_bottom = 747.0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="back" type="Button" parent="."]
+margin_left = 55.0
+margin_top = 671.0
+margin_right = 183.0
+margin_bottom = 709.0
+custom_colors/font_color = Color( 0.0117647, 1, 0.960784, 1 )
+custom_colors/font_color_hover = Color( 0.898039, 1, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Back"
+flat = true
+script = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 43.0
+margin_top = 32.0
+margin_right = 172.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 0.937255, 0.611765, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.00784314, 0.113725, 0.415686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 6 )
+text = "Adviser"
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 43.0
+margin_top = 68.0
+margin_right = 293.0
+margin_bottom = 93.0
+custom_fonts/font = SubResource( 7 )
+text = "Charles Jamer"
+
+[connection signal="pressed" from="back" to="back" method="_on_back_pressed"]
